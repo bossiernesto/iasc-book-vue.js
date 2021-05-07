@@ -1,7 +1,4 @@
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production'
-  ? '/iasc-book-vue.js'
-  : '/',
   publicPath: process.env.NODE_ENV === 'production'
   ? '/iasc-book-vue.js'
   : '/',

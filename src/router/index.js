@@ -4,7 +4,6 @@ import { publicPath } from '../vue.config'
 
 Vue.use(VueRouter);
 
-
 const routes = [
   {
     path:"/",
@@ -14,7 +13,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
+  base: publicPath,
   routes
 });
 
