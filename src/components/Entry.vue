@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="container header">
-  <div class="titulo-heading">
+    <div class="titulo-heading">
       <div class="container-background">
           <div class="titulo">
               <h3 class="Title">
@@ -14,12 +14,12 @@
           </div>
       </div>
   </div>
-        <div class="container">
-            <div class="inner-content col-sm-8 col-md-10">
-                <router-view />
-            </div>
+    <div class="container">
+        <div class="inner-content col-sm-8 col-md-10">
+            <router-view />
         </div>
     </div>
+  </div>
 </div>
 </template>
 <script>
@@ -35,7 +35,16 @@ export default {
 </script>
 <style scoped>
 .container-background {
-    background-image: url('~@/public/img/home-bg.jpg');
+    background-image: url('~@/assets/home-bg.jpg');
     min-height: 150px;
+}
+
+.titulo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 </style>

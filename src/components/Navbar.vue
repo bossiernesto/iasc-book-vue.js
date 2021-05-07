@@ -15,4 +15,24 @@
     </div>
 </nav>
 </template>
+<style lang="css">
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 2px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    border: none;
+}
+
+.navbar-button, .navbar-button:hover {
+    background: #F7882F;
+    color: #fff;
+}
+</style>
 

@@ -9,7 +9,9 @@
             class="sidebar-overlay"
             @click="collapsed = true"
           />
-          <router-view />
+          <AppLayout>
+            <slot />
+          </AppLayout>
           <Sidebar
             :collapsed="collapsed"
             @toggle-collapse="onToggleCollapse"
@@ -25,12 +27,14 @@
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import Sidebar from './components/Sidebar.vue'
+import AppLayout from '@/layouts/AppLayout'
 
 export default {
   name: 'App',
   components: {
-    Navbar,
+    AppLayout,
     Footer,
+    Navbar,
     Sidebar
   },
   mounted () {
