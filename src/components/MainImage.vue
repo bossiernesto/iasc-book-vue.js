@@ -68,7 +68,7 @@
 }
 
 .particle-js {
-    background-image: url(/img/iasc-home.jpg);
+    background-image: url(~@/../public/img/iasc-home.jpg);
     background-size: cover;
     position: absolute;
     top: 0;
