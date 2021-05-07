@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="year footer-col-rt col-md-6 col-lg-6 col-sm-6">
-                © 2021- IASC
+                © {{ new Date().getFullYear() }}- IASC
             </div>
             <div class="footer-col-lf col-md-6 col-lg-6 col-sm-6 right-flex">
                 <a href="https://github.com/arquitecturas-concurrentes/iasc-book">
@@ -23,10 +23,6 @@
     width: 100%;
     background-color: #333333;
     font-size: 0.9rem;
-  }
-
-  .year {
-    padding-left: 220px;
   }
 
   .github-icon {

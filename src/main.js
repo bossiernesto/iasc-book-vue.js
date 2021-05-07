@@ -3,7 +3,7 @@ import 'mutationobserver-shim'
 import Vue from 'vue'
 import './plugins/bootstrap-vue'
 import './plugins/vue-particles'
-import App from './App.vue'
+import IASCBook from './IASCBook.vue'
 import router from "./router";
 import './assets/styles/style.css';
 import './assets/styles/syntax.css';
@@ -18,5 +18,5 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  render: h => h(App),
+  render: h => h(IASCBook),
 }).$mount('#app')
