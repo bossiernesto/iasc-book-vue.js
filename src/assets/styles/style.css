@@ -200,11 +200,6 @@ ul ul a {
     color: #6B7A8F;
 }
 
-.container-background {
-    background-image: url("/images/public/home-bg.jpg");
-    min-height: 150px;
-}
-
 .titulo-heading {
     margin-bottom: 15px;
 }
@@ -222,15 +217,6 @@ ul ul a {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.footer {
-    height: 2em;
-    bottom: 0;
-    color: #aaa;
-    width: 100%;
-    background-color: #333333;
-    font-size: 0.9rem;
 }
 
 .search-results {

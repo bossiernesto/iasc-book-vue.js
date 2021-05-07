@@ -34,5 +34,8 @@ export default {
 }
 </script>
 <style scoped>
-
+.container-background {
+    background-image: url('~@/public/img/home-bg.jpg');
+    min-height: 150px;
+}
 </style>

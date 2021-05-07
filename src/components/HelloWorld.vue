@@ -58,4 +58,8 @@ li {
 a {
   color: #42b983;
 }
+.container-background {
+    background-image: url('~@/public/img/home-bg.jpg');
+    min-height: 150px;
+}
 </style>
