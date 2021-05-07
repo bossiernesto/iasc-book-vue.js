@@ -34,10 +34,9 @@ import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import AppLayout from '@/layouts/AppLayout'
 import { SidebarMenu } from 'vue-sidebar-menu'
+import Separator from '@/components/Separator.vue'
 
-const separator = {
-  template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
-}
+const separator = Separator
 
 export default {
   name: 'IASCBook',
@@ -46,10 +45,6 @@ export default {
     Footer,
     Navbar,
     SidebarMenu
-  },
-  mounted () {
-    this.onResize()
-    window.addEventListener('resize', this.onResize)
   },
   data () {
     return {
@@ -70,7 +65,9 @@ export default {
               title: 'Concurrencia y Paralelismo',
               icon: 'fa fa-book'
           },
-          { component: separator },
+          {
+            component: Separator
+          },
           {
               href: '/cps',
               title: 'CPS',
@@ -95,22 +92,22 @@ export default {
                       title: 'Fibers'
                   }
               ]
-          }
+          },
+          {
+            component: separator
+          },
       ],
     collapsed: false,
     isOnMobile: false
     }
   },
+  mounted () {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
   methods: {
     onToggleCollapse (collapsed) {
-      console.log(collapsed)
       this.collapsed = collapsed
-    },
-    onItemClick (event, item, node) {
-      console.log('onItemClick')
-      console.log(event)
-      console.log(item)
-      console.log(node)
     },
     onResize () {
       if (window.innerWidth <= 767) {
