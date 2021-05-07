@@ -154,7 +154,7 @@ export default {
 
 
 #app {
-  padding-left: 350px;
+  padding-left: 300px;
   transition: 0.3s ease;
 }
 #app.collapsed {
