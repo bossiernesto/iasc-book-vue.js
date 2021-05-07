@@ -109,6 +109,21 @@ export default {
               ]
           },
           {
+              href: '#stm',
+              title: 'Memoria Transaccional',
+              icon: 'fa fa-chevron-down',
+              child: [
+                  {
+                      href: '/efecto_lado_haskell',
+                      title: 'Efectos de Lado en Haskell'
+                  },
+                                              {
+                      href: '/stm',
+                      title: 'Memorial Transaccional'
+                  }
+              ]
+          },
+          {
             component: separator
           },
           {

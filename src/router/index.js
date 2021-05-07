@@ -160,6 +160,24 @@ const routes = [
     },
   },
   {
+    path: '/stm',
+    component: () => import('@/views/STM.vue'),
+    meta: {
+      title: 'STM',
+      description: 'Memoria Transaccional',
+      layout: 'AppLayoutEntry'
+    },
+  },
+  {
+    path: '/efecto_lado_haskell',
+    component: () => import('@/views/EfectoLadoHaskell.vue'),
+    meta: {
+      title: 'Efectos de Lado en Haskell',
+      description: 'Una intro a memoria transaccional en Haskell',
+      layout: 'AppLayoutEntry'
+    },
+  },
+  {
     path:"*",
     component: () => import('../views/errors/NotFound.vue'),
     meta: {
