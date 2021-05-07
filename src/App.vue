@@ -1,28 +1,96 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div id="app"
+   :class="[{'collapsed' : collapsed}, {'onmobile' : isOnMobile}]">
+    <div class="wrapper">
+      <div class="container header">
+          <Navbar/>
+          <div
+            v-if="isOnMobile && !collapsed"
+            class="sidebar-overlay"
+            @click="collapsed = true"
+          />
+          <router-view />
+          <Sidebar
+            :collapsed="collapsed"
+            @toggle-collapse="onToggleCollapse"
+            @item-click="onItemClick"
+          />
+      </div>
+    </div>
+    <Footer /> 
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
+import Sidebar from './components/Sidebar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navbar,
+    Footer,
+    Sidebar
+  },
+  mounted () {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
+  data () {
+    return {
+    collapsed: false,
+    isOnMobile: false
+    }
+  },
+  methods: {
+    onToggleCollapse (collapsed) {
+      console.log(collapsed)
+      this.collapsed = collapsed
+    },
+    onItemClick (event, item, node) {
+      console.log('onItemClick')
+      console.log(event)
+      console.log(item)
+      console.log(node)
+    },
+    onResize () {
+      if (window.innerWidth <= 767) {
+        this.isOnMobile = true
+        this.collapsed = true
+      } else {
+        this.isOnMobile = false
+        this.collapsed = false
+      }
+    }
   }
 }
 </script>
-
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding-left: 50px;
+  transition: 0.3s ease;
+}
+#app.collapsed {
+  padding-left: 50px;
+}
+#app.onmobile {
+  padding-left: 50px;
+}
+.sidebar-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 900;
+}
+.app {
+  padding: 70px;
+}
+.container {
+  max-width: 900px;
 }
 </style>
