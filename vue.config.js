@@ -1,4 +1,7 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/iasc-book-vue.js'
+  : '/',
   chainWebpack(config){
     config.module.rule('md')
       .test(/\.md/)
