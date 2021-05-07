@@ -3,6 +3,8 @@ import 'mutationobserver-shim'
 import Vue from 'vue'
 import './plugins/bootstrap-vue'
 import './plugins/vue-particles'
+import './plugins/highlightjs-vue'
+
 import IASCBook from './IASCBook.vue'
 import router from "./router";
 import './assets/styles/style.css';
