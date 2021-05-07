@@ -9,7 +9,7 @@
                 <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
             </li>
             <li class="nav-item">
-                <router-link class="nav-link navbar-button" to="/">IASC <span class="sr-only">(current)</span></router-link>
+                <a class="nav-link navbar-button" href="http://arquitecturas-concurrentes.github.io/">IASC</a>
             </li>
         </ul>
     </div>

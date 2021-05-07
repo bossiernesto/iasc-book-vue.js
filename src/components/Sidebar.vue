@@ -7,9 +7,9 @@
 <script>
 import { SidebarMenu } from 'vue-sidebar-menu'
 
-const separator = {
-  template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
-}
+// const separator = {
+//   template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
+// }
 
 export default {
   name: 'bm-menu',
@@ -27,20 +27,36 @@ export default {
                     },
                     {
                         href: '/introduccion',
-                        title: 'Dashboard',
+                        title: 'Introduccion',
                         icon: 'fa fa-user'
                     },
-                            {
-          component: separator
-        },
                     {
-                        href: '/charts',
-                        title: 'Charts',
+                        href: '/concurrencia_paralelismo',
+                        title: 'Concurrencia y Paralelismo',
+                        icon: 'fa fa-user'
+                    },
+                    {
+                        href: '/cps',
+                        title: 'CPS',
+                        icon: 'fa fa-user'
+                    },
+                                        {
+                        href: '/promises',
+                        title: 'Promises',
+                        icon: 'fa fa-user'
+                    },
+                    {
+                        href: '#',
+                        title: 'Planificacion Cooperativa',
                         icon: 'fa fa-chart-area',
                         child: [
                             {
-                                href: '/charts/sublink',
-                                title: 'Sub Link'
+                                href: '/corutinas',
+                                title: 'Corutinas'
+                            },
+                                                        {
+                                href: '/fibers',
+                                title: 'Fibers'
                             }
                         ]
                     }
