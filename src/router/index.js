@@ -26,7 +26,6 @@ const routes = [
   },
   {
     path: '/introduccion',
-    name: 'Introduccion',
     component: () => import('@/content/introduccion.md'),
     meta: {
       title: 'Introducción',
@@ -37,7 +36,6 @@ const routes = [
   },
   {
     path: '/concurrencia_paralelismo',
-    name: 'Concurrencia y Paralelismo',
     component: () => import('@/content/concurrencia_paralelismo.md'),
     meta: {
       title: 'Concurrencia y Paralelismo',
@@ -48,7 +46,6 @@ const routes = [
   },
   {
     path: '/cps',
-    name: 'CPS',
     component: () => import('@/content/cps.md'),
     meta: {
       title: 'CPS',
@@ -59,7 +56,6 @@ const routes = [
   },
   {
     path: '/promises',
-    name: 'Promises',
     component: () => import('@/content/promises.md'),
     meta: {
       title: 'Promises',
@@ -70,7 +66,6 @@ const routes = [
   },
   {
     path: '/corutinas',
-    name: 'Corrutinas (coroutines)',
     component: () => import('@/content/coroutines.md'),
     meta: {
       title: 'Corutinas',
@@ -81,7 +76,6 @@ const routes = [
   },
   {
     path: '/fibers',
-    name: 'Fibers',
     component: () => import('@/content/fibers.md'),
     meta: {
       title: 'Fibers',
@@ -91,8 +85,86 @@ const routes = [
     beforeEnter: clearHistory
   },
   {
+    path: '/actores_intro',
+    component: () => import('@/content/actores_intro.md'),
+    meta: {
+      title: 'Introduccion a Actores',
+      description: 'Actores y Elixir',
+      layout: 'AppLayoutEntry'
+    },
+    beforeEnter: clearHistory
+  },
+  {
+    path: '/otp',
+    name: 'Elixir/Erlang OTP',
+    component: () => import('@/content/otp.md'),
+    meta: {
+      title: 'Elixir y OTP',
+      description: 'OTP Elxir',
+      layout: 'AppLayoutEntry'
+    },
+    beforeEnter: clearHistory
+  },
+  {
+    path: '/distribucion',
+    component: () => import('@/content/distribucion.md'),
+    meta: {
+      title: 'Distribucion',
+      description: 'Introduccion y nociones de distribucion',
+      layout: 'AppLayoutEntry'
+    },
+  },
+  {
+    path: '/interleaving',
+    component: () => import('@/content/interleaving.md'),
+    meta: {
+      title: 'Intearleaving Y Netsplits ',
+      description: '...',
+      layout: 'AppLayoutEntry'
+    },
+  },
+  {
+    path: '/cap',
+    component: () => import('@/content/cap.md'),
+    meta: {
+      title: 'CAP',
+      description: 'Notas sobre CAP',
+      layout: 'AppLayoutEntry'
+    },
+  },
+  {
+    path: '/mitos_distribucion',
+    component: () => import('@/content/mitos.md'),
+    meta: {
+      title: 'Distribucion Bonus',
+      description: 'Mitos de la distribucion',
+      layout: 'AppLayoutEntry'
+    },
+  },
+  {
+    path: '/intro_contenedores',
+    component: () => import('@/content/contenedores.md'),
+    meta: {
+      title: 'Contenedores',
+      description: 'Contenedores con Docker',
+      layout: 'AppLayoutEntry'
+    },
+  },
+  {
+    path: '/service_mesh',
+    component: () => import('@/content/service_mesh.md'),
+    meta: {
+      title: 'Service Mesh',
+      description: 'Introduccion conceptual de Service Mesh',
+      layout: 'AppLayoutEntry'
+    },
+  },
+  {
     path:"*",
-    component: () => import('./../views/errors/404.vue')
+    component: () => import('../views/errors/NotFound.vue'),
+    meta: {
+      layout: 'AppLayoutError'
+    }
   }
 ];
 

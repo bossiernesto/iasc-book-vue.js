@@ -17,7 +17,7 @@
             :width="sidebarWidth"
             :collapsed="collapsed"
             @toggle-collapse="onToggleCollapse"
-            @item-click="onItemClick"/>
+          />
       </div>
     </div>
           <div
@@ -94,7 +94,65 @@ export default {
               ]
           },
           {
+              href: '#act',
+              title: 'Actores',
+              icon: 'fa fa-chevron-down',
+              child: [
+                  {
+                      href: '/actores_intro',
+                      title: 'Introduccion a Actores'
+                  },
+                                              {
+                      href: '/otp',
+                      title: 'Elixir/Erlang OTP'
+                  }
+              ]
+          },
+          {
             component: separator
+          },
+          {
+            header: true,
+            title: 'Arquitectura y Distribucion',
+            hiddenOnCollapse: true
+          },
+          {
+              href: '#dist',
+              title: 'Distribucion',
+              icon: 'fa fa-chevron-down',
+              child: [
+                  {
+                      href: '/distribucion',
+                      title: 'Introduccion a Distribucion'
+                  },
+                                              {
+                      href: '/interleaving',
+                      title: 'Interleaving y Netsplits'
+                  },
+                  {
+                      href: '/cap',
+                      title: 'Notas sobre CAP'
+                  },
+                  {
+                      href: '/mitos_distribucion',
+                      title: 'Mitos en la distribucion'
+                  }
+              ]
+          },
+          {
+              href: '#cont',
+              title: 'Contenedores',
+              icon: 'fa fa-chevron-down',
+              child: [
+                  {
+                      href: '/intro_contenedores',
+                      title: 'Intro a Contenedores'
+                  },
+                                              {
+                      href: '/service_mesh',
+                      title: 'Service Mesh'
+                  }
+              ]
           },
       ],
     collapsed: false,
