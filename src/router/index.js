@@ -9,6 +9,10 @@ const routes = [
     path:"/",
     component: () => import('@/views/Home.vue')
   },
+  {
+    path:"*",
+    component: () => import('./../views/errors/404.vue')
+  }
 ];
 
 const router = new VueRouter({

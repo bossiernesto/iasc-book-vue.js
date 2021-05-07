@@ -28,27 +28,27 @@ export default {
                     {
                         href: '/introduccion',
                         title: 'Introduccion',
-                        icon: 'fa fa-user'
+                        icon: 'fa fa-book'
                     },
                     {
                         href: '/concurrencia_paralelismo',
                         title: 'Concurrencia y Paralelismo',
-                        icon: 'fa fa-user'
+                        icon: 'fa fa-book'
                     },
                     {
                         href: '/cps',
                         title: 'CPS',
-                        icon: 'fa fa-user'
+                        icon: 'fa fa-book'
                     },
                                         {
                         href: '/promises',
                         title: 'Promises',
-                        icon: 'fa fa-user'
+                        icon: 'fa fa-book'
                     },
                     {
                         href: '#',
                         title: 'Planificacion Cooperativa',
-                        icon: 'fa fa-chart-area',
+                        icon: 'fa fa-chevron-down',
                         child: [
                             {
                                 href: '/corutinas',
@@ -66,6 +66,7 @@ export default {
 }
 </script>
 <style>
+
   .bm-menu {
       background: #6B7A8F;
       color: #fff;
