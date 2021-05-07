@@ -1,4 +1,4 @@
-## Anteriormente... en Arquitecturas Concurrentes {#intro}
+## Anteriormente... en Arquitecturas Concurrentes
 
 Hasta ahora trabajamos sobre un modelo de concurrencia basado en un _event loop_. En este esquema, cada evento se procesa completamente antes de pasar a la ejecución del próximo, y todo esto ocurre en un único thread.
 
