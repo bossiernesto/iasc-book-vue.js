@@ -4,6 +4,16 @@ import { publicPath } from '@/../vue.config'
 
 Vue.use(VueRouter);
 
+const clearHistory = (_to, _from, next) => {
+  if (sessionStorage.getItem('redirect') !== null) {
+    const redirect = sessionStorage.redirect
+    delete sessionStorage.redirect
+    next(redirect)
+  } else {
+    next()
+  }
+}
+
 const routes = [
   {
     path: '/',
@@ -11,7 +21,8 @@ const routes = [
     component: () => import('@/content/main.md'),
     meta: {
       layout: 'AppLayoutHome'
-    }
+    },
+    beforeEnter: clearHistory
   },
   {
     path: '/introduccion',
@@ -21,7 +32,8 @@ const routes = [
       title: 'Introducción',
       description: '¿De qué se trata Arquitecturas Concurrentes?',
       layout: 'AppLayoutEntry'
-    }
+    },
+    beforeEnter: clearHistory
   },
   {
     path: '/concurrencia_paralelismo',
@@ -31,7 +43,8 @@ const routes = [
       title: 'Concurrencia y Paralelismo',
       description: 'En busca de un vocabulario común',
       layout: 'AppLayoutEntry'
-    }
+    },
+    beforeEnter: clearHistory
   },
   {
     path: '/cps',
@@ -41,7 +54,8 @@ const routes = [
       title: 'CPS',
       description: 'Introduccion a CPS',
       layout: 'AppLayoutEntry'
-    }
+    },
+    beforeEnter: clearHistory
   },
   {
     path: '/promises',
@@ -51,7 +65,8 @@ const routes = [
       title: 'Promises',
       description: 'Modelando computaciones asincrónicas',
       layout: 'AppLayoutEntry'
-    }
+    },
+    beforeEnter: clearHistory
   },
   {
     path: '/corutinas',
@@ -61,7 +76,8 @@ const routes = [
       title: 'Corutinas',
       description: 'Introduccion a las corrutinas',
       layout: 'AppLayoutEntry'
-    }
+    },
+    beforeEnter: clearHistory
   },
   {
     path: '/fibers',
@@ -71,7 +87,8 @@ const routes = [
       title: 'Fibers',
       description: 'Fibers en Ruby',
       layout: 'AppLayoutEntry'
-    }
+    },
+    beforeEnter: clearHistory
   },
   {
     path:"*",
@@ -80,7 +97,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   base: publicPath,
   routes
 });

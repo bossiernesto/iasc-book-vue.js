@@ -1,3 +1,5 @@
+## Introduccion
+
 En [capítulos anteriores](https://arquitecturas-concurrentes.github.io/iasc-book/cps/) vimos una posible forma de estructurar nuestros programas, utilizando CPS. Esta técnica, a diferencia de call-and-return y memoria compartida, nos permite implementar, de forma fácil:
 - computaciones con un único resultado
 - computaciones que pueden fallar

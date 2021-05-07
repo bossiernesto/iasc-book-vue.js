@@ -1,4 +1,4 @@
-## Anteriormente... en Arquitecturas Concurrentes
+## Anteriormente... en Arquitecturas Concurrentes {#intro}
 
 Hasta ahora trabajamos sobre un modelo de concurrencia basado en un _event loop_. En este esquema, cada evento se procesa completamente antes de pasar a la ejecución del próximo, y todo esto ocurre en un único thread.
 
@@ -12,7 +12,7 @@ Para entender como funcionan, primero veamos **iteradores** y **generadores**...
 
 <img src="https://www.salesoptimize.com/wp-content/uploads/2016/11/76e3344703e128bed674b84014fa01ab.jpg" class='center'>
 
-## Iteradores y generadores
+## Iteradores y generadores {#generadores}
 
 Un **generador** es un tipo especial de subrutina, pensando en teoría de conjuntos, podemos decir que el conjunto generador es un subconjunto de corrutina.
 

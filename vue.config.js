@@ -11,7 +11,19 @@ module.exports = {
       .use('vue-markdown-loader')
       .loader('vue-markdown-loader/lib/markdown-compiler')
       .options({
-        raw: true
+        raw: true,
+        use: [
+          /* markdown-it plugin */
+          [require('markdown-it-anchor'), {
+            level: 1,
+            // slugify: string => string,
+            permalink: true,
+            // renderPermalink: (slug, opts, state, permalink) => {},
+            permalinkClass: 'header-anchor',
+            permalinkSymbol: '¶',
+            permalinkBefore: true
+          }]
+        ]
       })
   }
 }
