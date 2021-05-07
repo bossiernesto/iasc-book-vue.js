@@ -264,7 +264,9 @@
               How you got here is a mystery. But you can click the button below
               to go back to the homepage.
             </p>
-            <button class="btn orange">HOME</button>
+            <router-link class="nav-link" to="/">
+              <button class="btn orange">HOME</button>
+            </router-link>
           </div>
         </div>
       </div>
