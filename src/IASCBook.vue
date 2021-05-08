@@ -3,7 +3,6 @@
    :class="[{'collapsed' : collapsed}, {'onmobile' : isOnMobile}]">
     <div class="wrapper">
       <div class="container header">
-          <Navbar/>
           <div
             v-if="isOnMobile && !collapsed"
             class="sidebar-overlay"
@@ -17,21 +16,17 @@
             :width="sidebarWidth"
             :collapsed="collapsed"
             @toggle-collapse="onToggleCollapse"
-          />
+          >
+            <span slot="toggle-icon" class="fa fa-bars"></span>
+          </sidebar-menu>
       </div>
     </div>
-          <div
-        v-if="isOnMobile && !collapsed"
-        class="sidebar-overlay"
-        @click="collapsed = true"
-      />
     <Footer /> 
     </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
+import Footer from '@/components/Footer.vue'
 import AppLayout from '@/layouts/AppLayout'
 import { SidebarMenu } from 'vue-sidebar-menu'
 import Separator from '@/components/Separator.vue'
@@ -43,7 +38,6 @@ export default {
   components: {
     AppLayout,
     Footer,
-    Navbar,
     SidebarMenu
   },
   data () {
@@ -273,5 +267,16 @@ export default {
 .bm-menu ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
     background: #7187a7;
+}
+</style>
+<style lang="scss" scoped>
+.sidebar.v-sidebar-menu .vsm-arrow:after {
+  content: '\f105';
+  font-family: 'FontAwesome';
+}
+
+.sidebar.v-sidebar-menu .collapse-btn:after {
+  content: '\f07e';
+  font-family: 'FontAwesome';
 }
 </style>

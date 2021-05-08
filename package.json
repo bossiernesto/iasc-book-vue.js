@@ -9,6 +9,9 @@
     "deploy": "node node_scripts/gh-pages-deploy.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
     "@popperjs/core": "^2.9.2",
     "axios": "^0.21.1",
     "bootstrap-vue": "^2.21.2",
@@ -23,6 +26,7 @@
     "vue": "^2.6.12",
     "vue-awesome": "^4.1.0",
     "vue-code-highlight": "^0.7.4",
+    "vue-fontawesome": "^0.0.2",
     "vue-highlight.js": "^3.1.0",
     "vue-highlightjs": "^1.3.3",
     "vue-loader": "^15.9.6",

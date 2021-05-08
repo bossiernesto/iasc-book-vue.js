@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar/>
     <Entry :title="entry.title" :description="entry.description"/>
     <slot />
   </div>
@@ -7,11 +8,13 @@
 
 <script>
 import Entry from '@/components/Entry.vue'
+import Navbar from '@/components/Navbar.vue'
 
 export default {
   name: "AppLayoutEntry",
   components: {
-    Entry
+    Entry,
+    Navbar
   },
   data() {
     return {
