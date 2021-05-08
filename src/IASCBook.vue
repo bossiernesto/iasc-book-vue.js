@@ -8,17 +8,21 @@
             class="sidebar-overlay"
             @click="collapsed = true"
           />
-          <AppLayout>
-            <slot />
-          </AppLayout>
-          <sidebar-menu         
-            :menu="menu"
-            :width="sidebarWidth"
-            :collapsed="collapsed"
-            @toggle-collapse="onToggleCollapse"
-          >
-            <span slot="toggle-icon" class="fa fa-bars"></span>
-          </sidebar-menu>
+          <perfect-scrollbar>
+            <AppLayout>
+              <slot />
+            </AppLayout>
+          </perfect-scrollbar>
+          <perfect-scrollbar>
+            <sidebar-menu         
+              :menu="menu"
+              :width="sidebarWidth"
+              :collapsed="collapsed"
+              @toggle-collapse="onToggleCollapse"
+            >
+              <span slot="toggle-icon" class="fa fa-bars"></span>
+            </sidebar-menu>
+          </perfect-scrollbar>
       </div>
     </div>
     <Footer /> 
