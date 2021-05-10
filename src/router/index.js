@@ -190,14 +190,13 @@ const router = new VueRouter({
   mode: 'history',
   base: publicPath,
   routes,
-  scrollBehavior (to) {
+  scrollBehavior: function (to) {
     if (to.hash) {
+      console.log(to.hash)
       return {
-        selector: to.hash,
-        behavior: 'smooth'
-      };
+        selector: to.hash
+      }
     }
-    return { x: 0, y: 0 };  // Go to the top of the page if no hash
   }
 });
 
