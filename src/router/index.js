@@ -189,7 +189,16 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: publicPath,
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (to.hash) {
+      console.log(to.hash)
+      return {
+        selector: to.hash,
+        behavior: 'smooth',
+      }
+    }
+  }
 });
 
 export default router;
