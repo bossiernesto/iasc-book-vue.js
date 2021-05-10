@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="scroll-touch">
     <Navbar/>
     <Entry :title="entry.title" :description="entry.description"/>
     <slot />
@@ -27,4 +27,7 @@ export default {
 }
 </script>
 <style scoped>
+.scroll-touch {
+  -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+}
 </style>

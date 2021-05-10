@@ -4,8 +4,6 @@ import Vue from 'vue'
 import './plugins/bootstrap-vue'
 import './plugins/vue-particles'
 import './plugins/highlightjs-vue'
-import './plugins/fa-vue'
-import './plugins/perfect-scrollbar'
 
 import IASCBook from './IASCBook.vue'
 import router from "./router";
