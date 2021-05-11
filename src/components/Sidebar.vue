@@ -24,7 +24,7 @@ export default {
                 menu: [
                     {
                         header: true,
-                        title: 'IASC Notes',
+                        title: 'IASC Book',
                         hiddenOnCollapse: true
                     },
                     {
