@@ -2,7 +2,9 @@
    <sidebar-menu :menu="menu"
         :width="sidebarWidth"        
         :collapsed="collapsed"
-        :show-one-child="true" />
+        :show-one-child="true"
+        @item-click="onItemClick" 
+    />
 </template>
 <script>
 import { SidebarMenu } from 'vue-sidebar-menu'
@@ -62,7 +64,14 @@ export default {
                     }
                 ]
             }
+        },
+    methods: {
+        onItemClick(event, item) {
+            if (!item.child) {
+                this.$refs.menu.mobileItem = null
+            }
         }
+    }
 }
 </script>
 <style>
