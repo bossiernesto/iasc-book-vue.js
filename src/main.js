@@ -1,4 +1,4 @@
-import '@babel/polyfill'
+import "core-js/stable";
 import 'mutationobserver-shim'
 import Vue from 'vue'
 import './plugins/bootstrap-vue'
