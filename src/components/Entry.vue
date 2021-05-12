@@ -25,12 +25,6 @@
 <script>
 export default {
   name: 'Entry',
-  mounted() {
-    this.scrollToAnchor();
-  },
-  updated () {
-    this.scrollToAnchor();
-  },
   methods: {
     scrollToAnchor () {
     this.$nextTick(() => {

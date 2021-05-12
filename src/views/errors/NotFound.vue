@@ -273,12 +273,8 @@
     </div>
 </template>
 <script>
-
 export default {
-    name: 'NotFound',
-    mounted() {
-        console.log('404');
-    }
+    name: 'NotFound'
 }
 </script>
 <style lang="scss" scoped>

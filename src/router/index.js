@@ -1,8 +1,24 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import { publicPath } from '@/../vue.config'
+import ContentPages from '@/static/pages.json'
 
 Vue.use(VueRouter);
+
+const pagesRoutes = () => {
+  return ContentPages.map(section => (
+    {
+      path: `/${section.path}`,
+      component: () => import(`@/content/${section.page}.md`),
+      meta: {
+        title: section.title,
+        description: section.description
+      }
+    }
+  ))
+}
+
+console.log(pagesRoutes())
 
 const routes = [
   {
@@ -13,71 +29,7 @@ const routes = [
       layout: 'AppLayoutHome'
     }
   },
-  {
-    path: '/introduccion',
-    component: () => import('@/content/introduccion.md'),
-    meta: {
-      title: 'Introducción',
-      description: '¿De qué se trata Arquitecturas Concurrentes?'
-    }
-  },
-  {
-    path: '/concurrencia_paralelismo',
-    component: () => import('@/content/concurrencia_paralelismo.md'),
-    meta: {
-      title: 'Concurrencia y Paralelismo',
-      description: 'En busca de un vocabulario común'
-    }
-  },
-  {
-    path: '/cps',
-    component: () => import('@/content/cps.md'),
-    meta: {
-      title: 'CPS',
-      description: 'Introduccion a CPS'
-    }
-  },
-  {
-    path: '/promises',
-    component: () => import('@/content/promises.md'),
-    meta: {
-      title: 'Promises',
-      description: 'Modelando computaciones asincrónicas'
-    }
-  },
-  {
-    path: '/corutinas',
-    component: () => import('@/content/coroutines.md'),
-    meta: {
-      title: 'Corutinas',
-      description: 'Introduccion a las corrutinas'
-    }
-  },
-  {
-    path: '/fibers',
-    component: () => import('@/content/fibers.md'),
-    meta: {
-      title: 'Fibers',
-      description: 'Fibers en Ruby'
-    }
-  },
-  {
-    path: '/actores_intro',
-    component: () => import('@/content/actores_intro.md'),
-    meta: {
-      title: 'Introduccion a Actores',
-      description: 'Actores y Elixir'
-    }
-  },
-  {
-    path: '/otp',
-    name: 'Elixir/Erlang OTP',
-    component: () => import('@/content/otp.md'),
-    meta: {
-      title: 'Elixir y OTP',
-      description: 'OTP Elxir'
-    }
-  },
+  ...pagesRoutes(),
   {
     path: '/distribucion',
     component: () => import('@/content/distribucion.md'),
@@ -90,7 +42,7 @@ const routes = [
     path: '/interleaving',
     component: () => import('@/content/interleaving.md'),
     meta: {
-      title: 'Intearleaving Y Netsplits ',
+      title: 'Intearleaving Y Netsplits',
       description: '...'
     },
   },
@@ -154,7 +106,17 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: publicPath,
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    console.log(from)
+    if (to.hash) {
+        return { selector: to.hash }
+    } else if (savedPosition) {
+        return savedPosition;
+    } else {
+        return { x: 0, y: 0 }
+    }
+  }
 });
 
 export default router;
