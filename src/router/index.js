@@ -29,8 +29,7 @@ const routes = [
     component: () => import('@/content/introduccion.md'),
     meta: {
       title: 'Introducción',
-      description: '¿De qué se trata Arquitecturas Concurrentes?',
-      layout: 'AppLayoutEntry'
+      description: '¿De qué se trata Arquitecturas Concurrentes?'
     },
     beforeEnter: clearHistory
   },
@@ -39,8 +38,7 @@ const routes = [
     component: () => import('@/content/concurrencia_paralelismo.md'),
     meta: {
       title: 'Concurrencia y Paralelismo',
-      description: 'En busca de un vocabulario común',
-      layout: 'AppLayoutEntry'
+      description: 'En busca de un vocabulario común'
     },
     beforeEnter: clearHistory
   },
@@ -49,8 +47,7 @@ const routes = [
     component: () => import('@/content/cps.md'),
     meta: {
       title: 'CPS',
-      description: 'Introduccion a CPS',
-      layout: 'AppLayoutEntry'
+      description: 'Introduccion a CPS'
     },
     beforeEnter: clearHistory
   },
@@ -59,8 +56,7 @@ const routes = [
     component: () => import('@/content/promises.md'),
     meta: {
       title: 'Promises',
-      description: 'Modelando computaciones asincrónicas',
-      layout: 'AppLayoutEntry'
+      description: 'Modelando computaciones asincrónicas'
     },
     beforeEnter: clearHistory
   },
@@ -69,8 +65,7 @@ const routes = [
     component: () => import('@/content/coroutines.md'),
     meta: {
       title: 'Corutinas',
-      description: 'Introduccion a las corrutinas',
-      layout: 'AppLayoutEntry'
+      description: 'Introduccion a las corrutinas'
     },
     beforeEnter: clearHistory
   },
@@ -79,8 +74,7 @@ const routes = [
     component: () => import('@/content/fibers.md'),
     meta: {
       title: 'Fibers',
-      description: 'Fibers en Ruby',
-      layout: 'AppLayoutEntry'
+      description: 'Fibers en Ruby'
     },
     beforeEnter: clearHistory
   },
@@ -89,8 +83,7 @@ const routes = [
     component: () => import('@/content/actores_intro.md'),
     meta: {
       title: 'Introduccion a Actores',
-      description: 'Actores y Elixir',
-      layout: 'AppLayoutEntry'
+      description: 'Actores y Elixir'
     },
     beforeEnter: clearHistory
   },
@@ -100,8 +93,7 @@ const routes = [
     component: () => import('@/content/otp.md'),
     meta: {
       title: 'Elixir y OTP',
-      description: 'OTP Elxir',
-      layout: 'AppLayoutEntry'
+      description: 'OTP Elxir'
     },
     beforeEnter: clearHistory
   },
@@ -110,8 +102,7 @@ const routes = [
     component: () => import('@/content/distribucion.md'),
     meta: {
       title: 'Distribucion',
-      description: 'Introduccion y nociones de distribucion',
-      layout: 'AppLayoutEntry'
+      description: 'Introduccion y nociones de distribucion'
     },
   },
   {
@@ -119,8 +110,7 @@ const routes = [
     component: () => import('@/content/interleaving.md'),
     meta: {
       title: 'Intearleaving Y Netsplits ',
-      description: '...',
-      layout: 'AppLayoutEntry'
+      description: '...'
     },
   },
   {
@@ -128,8 +118,7 @@ const routes = [
     component: () => import('@/content/cap.md'),
     meta: {
       title: 'CAP',
-      description: 'Notas sobre CAP',
-      layout: 'AppLayoutEntry'
+      description: 'Notas sobre CAP'
     },
   },
   {
@@ -137,8 +126,7 @@ const routes = [
     component: () => import('@/content/mitos.md'),
     meta: {
       title: 'Distribucion Bonus',
-      description: 'Mitos de la distribucion',
-      layout: 'AppLayoutEntry'
+      description: 'Mitos de la distribucion'
     },
   },
   {
@@ -146,8 +134,7 @@ const routes = [
     component: () => import('@/content/contenedores.md'),
     meta: {
       title: 'Contenedores',
-      description: 'Contenedores con Docker',
-      layout: 'AppLayoutEntry'
+      description: 'Contenedores con Docker'
     },
   },
   {
@@ -155,8 +142,7 @@ const routes = [
     component: () => import('@/content/service_mesh.md'),
     meta: {
       title: 'Service Mesh',
-      description: 'Introduccion conceptual de Service Mesh',
-      layout: 'AppLayoutEntry'
+      description: 'Introduccion conceptual de Service Mesh'
     },
   },
   {
@@ -164,8 +150,7 @@ const routes = [
     component: () => import('@/views/STM.vue'),
     meta: {
       title: 'STM',
-      description: 'Memoria Transaccional',
-      layout: 'AppLayoutEntry'
+      description: 'Memoria Transaccional'
     },
   },
   {
@@ -173,8 +158,7 @@ const routes = [
     component: () => import('@/views/EfectoLadoHaskell.vue'),
     meta: {
       title: 'Efectos de Lado en Haskell',
-      description: 'Una intro a memoria transaccional en Haskell',
-      layout: 'AppLayoutEntry'
+      description: 'Una intro a memoria transaccional en Haskell'
     },
   },
   {
@@ -189,15 +173,7 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: publicPath,
-  routes,
-  scrollBehavior: function (to) {
-    if (to.hash) {
-      console.log(to.hash)
-      return {
-        selector: to.hash
-      }
-    }
-  }
+  routes
 });
 
 export default router;

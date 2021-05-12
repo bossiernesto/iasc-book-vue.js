@@ -25,7 +25,22 @@
 <script>
 export default {
   name: 'Entry',
-  components: {
+  mounted() {
+    this.scrollToAnchor();
+  },
+  updated () {
+    this.scrollToAnchor();
+  },
+  methods: {
+    scrollToAnchor () {
+    this.$nextTick(() => {
+      if(this.$route.hash) {
+        const hash = this.$route.hash
+        const el = document.querySelector(hash)
+        el && window.scrollTo(0, el.offsetTop);
+      }
+    });				
+  }
   },
   props: {
     title: String,
