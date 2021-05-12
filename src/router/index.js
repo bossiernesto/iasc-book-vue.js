@@ -4,16 +4,6 @@ import { publicPath } from '@/../vue.config'
 
 Vue.use(VueRouter);
 
-const clearHistory = (_to, _from, next) => {
-  if (sessionStorage.getItem('redirect') !== null) {
-    const redirect = sessionStorage.redirect
-    delete sessionStorage.redirect
-    next(redirect)
-  } else {
-    next()
-  }
-}
-
 const routes = [
   {
     path: '/',
@@ -21,8 +11,7 @@ const routes = [
     component: () => import('@/content/main.md'),
     meta: {
       layout: 'AppLayoutHome'
-    },
-    beforeEnter: clearHistory
+    }
   },
   {
     path: '/introduccion',
@@ -30,8 +19,7 @@ const routes = [
     meta: {
       title: 'Introducción',
       description: '¿De qué se trata Arquitecturas Concurrentes?'
-    },
-    beforeEnter: clearHistory
+    }
   },
   {
     path: '/concurrencia_paralelismo',
@@ -39,8 +27,7 @@ const routes = [
     meta: {
       title: 'Concurrencia y Paralelismo',
       description: 'En busca de un vocabulario común'
-    },
-    beforeEnter: clearHistory
+    }
   },
   {
     path: '/cps',
@@ -48,8 +35,7 @@ const routes = [
     meta: {
       title: 'CPS',
       description: 'Introduccion a CPS'
-    },
-    beforeEnter: clearHistory
+    }
   },
   {
     path: '/promises',
@@ -57,8 +43,7 @@ const routes = [
     meta: {
       title: 'Promises',
       description: 'Modelando computaciones asincrónicas'
-    },
-    beforeEnter: clearHistory
+    }
   },
   {
     path: '/corutinas',
@@ -66,8 +51,7 @@ const routes = [
     meta: {
       title: 'Corutinas',
       description: 'Introduccion a las corrutinas'
-    },
-    beforeEnter: clearHistory
+    }
   },
   {
     path: '/fibers',
@@ -75,8 +59,7 @@ const routes = [
     meta: {
       title: 'Fibers',
       description: 'Fibers en Ruby'
-    },
-    beforeEnter: clearHistory
+    }
   },
   {
     path: '/actores_intro',
@@ -84,8 +67,7 @@ const routes = [
     meta: {
       title: 'Introduccion a Actores',
       description: 'Actores y Elixir'
-    },
-    beforeEnter: clearHistory
+    }
   },
   {
     path: '/otp',
@@ -94,8 +76,7 @@ const routes = [
     meta: {
       title: 'Elixir y OTP',
       description: 'OTP Elxir'
-    },
-    beforeEnter: clearHistory
+    }
   },
   {
     path: '/distribucion',

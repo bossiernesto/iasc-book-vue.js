@@ -36,6 +36,7 @@ export default {
     this.$nextTick(() => {
       if(this.$route.hash) {
         const hash = this.$route.hash
+        console.log(hash)
         const el = document.querySelector(hash)
         el && window.scrollTo(0, el.offsetTop);
       }
