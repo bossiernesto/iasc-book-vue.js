@@ -7,6 +7,9 @@
 import axios from "axios";
 import MarkdownIt from 'markdown-it';
 import MarkdownItAnchor from 'markdown-it-anchor'
+const uslug = require('uslug')
+
+const uslugify = s => uslug(s)
 
 let renderize_md = (input) => {
   const md = MarkdownIt().use(MarkdownItAnchor, {
@@ -16,7 +19,8 @@ let renderize_md = (input) => {
             // renderPermalink: (slug, opts, state, permalink) => {},
             permalinkClass: 'header-anchor',
             permalinkSymbol: '¶',
-            permalinkBefore: true
+            permalinkBefore: true,
+            slugify: uslugify
   })
   return md.render(input)
 }

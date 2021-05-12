@@ -1,3 +1,6 @@
+const uslug = require('uslug')
+const uslugify = s => uslug(s)
+
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
   ? '/iasc-book-vue.js'
@@ -21,7 +24,8 @@ module.exports = {
             // renderPermalink: (slug, opts, state, permalink) => {},
             permalinkClass: 'header-anchor',
             permalinkSymbol: '¶',
-            permalinkBefore: true
+            permalinkBefore: true,
+            slugify: uslugify
           }]
         ]
       })
