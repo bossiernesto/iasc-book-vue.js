@@ -46,5 +46,41 @@
     "page": "otp",
     "title": "Elixir/Erlang OTP",
     "description": "OTP Elxir"
+  },
+  {
+    "path": "distribucion",
+    "page": "distribucion",
+    "title": "Distribucion",
+    "description": "Introduccion y nociones de distribucion"
+  },
+  {
+    "path": "interleaving",
+    "page": "interleaving",
+    "title": "Intearleaving Y Netsplits",
+    "description": "...."
+  },
+  {
+    "path": "cap",
+    "page": "cap",
+    "title": "CAP",
+    "description": "Notas sobre CAP"
+  },
+  {
+    "path": "mitos_distribucion",
+    "page": "mitos",
+    "title": "Distribucion Bonus",
+    "description": "Mitos de la distribucion"
+  },
+  {
+    "path": "intro_contenedores",
+    "page": "contenedores",
+    "title": "Contenedores",
+    "description": "Contenedores con Docker"
+  },
+  {
+    "path": "service_mesh",
+    "page": "service_mesh",
+    "title": "Service Mesh",
+    "description": "Introduccion conceptual de Service Mesh"
   }
 ]

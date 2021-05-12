@@ -31,54 +31,6 @@ const routes = [
   },
   ...pagesRoutes(),
   {
-    path: '/distribucion',
-    component: () => import('@/content/distribucion.md'),
-    meta: {
-      title: 'Distribucion',
-      description: 'Introduccion y nociones de distribucion'
-    },
-  },
-  {
-    path: '/interleaving',
-    component: () => import('@/content/interleaving.md'),
-    meta: {
-      title: 'Intearleaving Y Netsplits',
-      description: '...'
-    },
-  },
-  {
-    path: '/cap',
-    component: () => import('@/content/cap.md'),
-    meta: {
-      title: 'CAP',
-      description: 'Notas sobre CAP'
-    },
-  },
-  {
-    path: '/mitos_distribucion',
-    component: () => import('@/content/mitos.md'),
-    meta: {
-      title: 'Distribucion Bonus',
-      description: 'Mitos de la distribucion'
-    },
-  },
-  {
-    path: '/intro_contenedores',
-    component: () => import('@/content/contenedores.md'),
-    meta: {
-      title: 'Contenedores',
-      description: 'Contenedores con Docker'
-    },
-  },
-  {
-    path: '/service_mesh',
-    component: () => import('@/content/service_mesh.md'),
-    meta: {
-      title: 'Service Mesh',
-      description: 'Introduccion conceptual de Service Mesh'
-    },
-  },
-  {
     path: '/stm',
     component: () => import('@/views/STM.vue'),
     meta: {

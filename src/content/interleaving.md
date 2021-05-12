@@ -1,8 +1,3 @@
----
-layout: default
-title: "Intearleaving Y Netsplits"
----
-
 ## Interleaving y netsplits
 
 <img src="~@/images/interleaving/0.png" class='center iasc-image'>
