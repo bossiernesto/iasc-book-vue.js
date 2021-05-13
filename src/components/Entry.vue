@@ -60,7 +60,7 @@ export default {
     padding-bottom: 10px;
     padding-left: 40px;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #FFFFFF;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    color: #fafafa;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 </style>
