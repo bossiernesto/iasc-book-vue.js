@@ -6,6 +6,10 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import Asciidoctor from 'asciidoctor'
 
+const base = process.env.NODE_ENV === 'production'
+  ? '/iasc-book-3-test/'
+  : ''
+
 export default defineConfig({
   plugins: [
     vue(),
@@ -52,7 +56,7 @@ export default defineConfig({
       },
     },
   ],
-  base: '/iasc-book-3-test/',
+  base: base,
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
