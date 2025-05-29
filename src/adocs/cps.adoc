@@ -1,6 +1,3 @@
-[abstract]
- This is the abstract2.
-
 
 == Introduccion
 
@@ -290,9 +287,6 @@ Moraleja: no es culpa del CPS, es culpa nuestra al no delegar convenientemente.
 * CPS nos lleva, si no tenemos cuidado al callback hell. Sin embargo, no es inherente a CPS, sino que es consecuencia de una mala delegación. Es posible resolverlo si se delega apropiadamente y aplicando los conceptos de programación funcional de orden superior y creando combinadores apropiados
 * CPS nos permite implementar computaciones asincrónicas. NodeJS emplea CPS para soportarlas.
 * El uso de CPS en NodeJS: pésimo manejo de errores y ausencia de abstracciones para hacerlo mas tratable. Por eso es que la comunidad centró su atención en otra forma de estructurar programas con influencias funcionales: las promesas (promises).
-:hide-uri-scheme:
-
-https://asciidoctor.org
 
 _The Pragmatic Programmer_ <<pp>> should be required reading for all developers.
 To learn all about design patterns, refer to the book by the "`Gang of Four`" <<gof>>.

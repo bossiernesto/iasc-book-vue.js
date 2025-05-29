@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EntryAdoc from '@/components/EntryAdoc.vue'
+import AdocPage from '@/components/AdocPage.vue'
 import ContentPages from '@/static/pages.json'
 
 const pagesRoutes = () => {
@@ -24,11 +25,30 @@ const routes = [
   {
     path: '/',
     name: 'Home',
+    component: AdocPage,
+    props: () => ({
+      adocName: 'main',
+    }),
     meta: {
       layout: 'AppLayoutHome',
     },
   },
   ...pagesRoutes(),
+  {
+    path: '/tema/stm',
+    component: () => import('@/views/STM.vue'),
+  },
+  {
+    path: '/tema/efecto_lado_haskell',
+    component: () => import('@/views/EfectoLadoHaskell.vue'),
+  },
+  {
+    path: '/:pathMatch(.*)',
+    component: () => import('@/views/errors/NotFound.vue'),
+    meta: {
+      layout: 'AppLayoutError',
+    },
+  },
 ]
 
 const router = createRouter({

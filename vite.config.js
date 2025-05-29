@@ -5,7 +5,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import Asciidoctor from 'asciidoctor'
-import highlightJsExt from 'asciidoctor-highlight.js'
 
 export default defineConfig({
   plugins: [
@@ -17,8 +16,6 @@ export default defineConfig({
       transform(src, id) {
         if (id.endsWith('.adoc')) {
           const asciidoctor = Asciidoctor()
-          // Register server-side hightlightjs highlighting
-          highlightJsExt.register(asciidoctor.Extensions)
 
           // Register custom extension to add biblioref class
           // Register a postprocessor to add 'biblioref' class to xrefs (like <<pp>>)
@@ -42,7 +39,6 @@ export default defineConfig({
             doctype: 'article',
             attributes: {
               icons: 'font',
-              'source-highlighter': 'highlightjs-ext',
               'hide-uri-scheme': true,
               sectids: true,
               sectanchors: true,

@@ -1,5 +1,5 @@
 <template>
-  <div class="adoc-container" v-html="adocHtml"></div>
+  <div v-if="adocHtml" class="adoc-container" v-html="adocHtml"></div>
 </template>
 
 <script setup>
