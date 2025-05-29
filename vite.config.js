@@ -52,6 +52,7 @@ export default defineConfig({
       },
     },
   ],
+  base: '/iasc-book-3-test/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
