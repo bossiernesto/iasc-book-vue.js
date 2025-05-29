@@ -1,6 +1,14 @@
-import './assets/main.css'
+import './plugins/bootstrap-vue.js'
+import './plugins/styles.js'
+import './plugins/hljs.js'
+
+import hljsVuePlugin from '@highlightjs/vue-plugin'
 
 import { createApp } from 'vue'
-import App from './App.vue'
+import router from './router'
+import IASCBook from './IASCBook.vue'
 
-createApp(App).mount('#app')
+const app = createApp(IASCBook)
+app.use(router)
+app.use(hljsVuePlugin)
+app.mount('#app')

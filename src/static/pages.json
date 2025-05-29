@@ -1,0 +1,27 @@
+[
+  {
+    "path": "introduccion",
+    "title": "Introducción",
+    "description": "¿De qué se trata Arquitecturas Concurrentes?"
+  },
+  {
+    "path": "concurrencia_paralelismo",
+    "title": "Concurrencia y Paralelismo",
+    "description": "En busca de un vocabulario común"
+  },
+  {
+    "path": "cap",
+    "title": "CAP",
+    "description": "Notas sobre CAP"
+  },
+  {
+    "path": "cps",
+    "title": "CPS",
+    "description": "Notas sobre CPS"
+  },
+  {
+    "path": "event_loop",
+    "title": "Event Loop",
+    "description": "Breve introducción al event loop"
+  }
+]
